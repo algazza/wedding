@@ -44,7 +44,7 @@ const data = useLocalStorage<FormSchema>("form-data", {
   wish: "",
 });
 
-const isSuccess = useLocalStorage('isSuccess', true)
+const isSuccess = useLocalStorage("isSuccess", true);
 </script>
 
 <template>
@@ -212,7 +212,11 @@ const isSuccess = useLocalStorage('isSuccess', true)
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <Divider color="primary" />
+          <div
+            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
+          >
+            <div class="mx-8 size-3 rounded-full bg-primary" />
+          </div>
 
           <img :src="flower2" alt="flower" class="w-full px-8" />
           <h1 class="font-italiano text-4xl">Wedding Reception</h1>
@@ -245,8 +249,11 @@ const isSuccess = useLocalStorage('isSuccess', true)
             class="rounded-full bg-[#662E1F] py-20 text-white px-8 grid gap-12"
           >
             <h1 class="text-4xl font-italiano">Live Streaming</h1>
-            <Divider color="white" />
-            <h1 class="text-4xl font-italiano">Coming Soon</h1>
+          <div
+            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-white after:content-[''] after:flex-1 after:h-px after:bg-white my-4"
+          >
+            <div class="mx-8 size-3 rounded-full bg-white" />
+          </div>            <h1 class="text-4xl font-italiano">Coming Soon</h1>
           </div>
         </div>
       </section>
@@ -266,13 +273,22 @@ const isSuccess = useLocalStorage('isSuccess', true)
       </section>
 
       <section class="mx-4">
-        <Divider color="primary" />
-      </section>
+          <div
+            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
+          >
+            <div class="mx-8 size-3 rounded-full bg-primary" />
+          </div>      </section>
 
       <section class="my-20 px-4">
         <div class="grid gap-2 text-center">
           <h1 class="font-italiano text-6xl">RSVP</h1>
-          <p class="text-xl">{{isSuccess ? "THANK YOU FOR YOUR RESPONSEfe": 'PLEASE CONFIRM YOUR ATTENDANCE'}}</p>
+          <p class="text-xl">
+            {{
+              isSuccess
+                ? "THANK YOU FOR YOUR RESPONSEfe"
+                : "PLEASE CONFIRM YOUR ATTENDANCE"
+            }}
+          </p>
         </div>
 
         <div
@@ -301,8 +317,11 @@ const isSuccess = useLocalStorage('isSuccess', true)
       </section>
 
       <section class="mx-4">
-        <Divider color="primary" />
-      </section>
+          <div
+            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
+          >
+            <div class="mx-8 size-3 rounded-full bg-primary" />
+          </div>      </section>
 
       <section class="my-20 px-4 flex justify-center items-center">
         <div class="relative w-[314px]">
