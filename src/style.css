@@ -85,7 +85,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-sm font-light text-[#662E1F];
     font-family: "Julius Sans One", sans-serif;
   }
   html {

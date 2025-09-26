@@ -56,16 +56,13 @@ const toggleAudio = () => {
   audioRef.value.muted = isMuted.value;
 };
 
-onMounted(() => {
-  isSuccess.value = false
-})
 </script>
 
 <template>
   <iframe name="hidden_iframe" style="display: none"></iframe>
 
   <main
-    class="overflow-hidden text-sm text-primary font-light bg-[url(/src/assets/background.jpg)] bg-center bg-contain grid justify-center"
+    class="overflow-hidden bg-[url(/src/assets/background.jpg)] bg-center bg-contain grid justify-center"
   >
     <div class="max-w-[500px] relative">
       <Opening />
