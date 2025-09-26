@@ -85,7 +85,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-sm font-light text-primary;
+    @apply bg-background text-sm font-light text-amber-950;
     font-family: "Julius Sans One", sans-serif;
   }
 }
