@@ -45,7 +45,7 @@ const data = useLocalStorage<FormSchema>("form-data", {
   wish: "",
 });
 
-const isSuccess = useLocalStorage<boolean>("isSuccess", true);
+const isSuccess = useLocalStorage<boolean>("isSuccess", false);
 
 const audioRef = ref<HTMLAudioElement | null>(null);
 const isMuted = ref(false);
