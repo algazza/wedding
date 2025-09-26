@@ -26,7 +26,7 @@ import Form from "./components/form.vue";
 import Opening from "./components/opening.vue";
 import { useLocalStorage } from "@vueuse/core";
 import type { FormSchema } from "./type";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
 const imageArray = [
   Prewed1,
