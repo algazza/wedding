@@ -5,6 +5,7 @@ import { ref } from "vue";
 import { motion } from "motion-v";
 
 const isOpen = ref(true);
+
 </script>
 
 <template>

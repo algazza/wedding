@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { Clock8, MapPin } from "lucide-vue-next";
+import { Clock8, MapPin, Volume2, VolumeOff } from "lucide-vue-next";
 import Countdown from "./components/countdown.vue";
 import {
+  backsound,
   borederTitle,
   divider,
   flower,
@@ -21,11 +22,11 @@ import {
   PrewedClose,
   Reza,
 } from "./lib/image";
-import Divider from "./components/divider.vue";
 import Form from "./components/form.vue";
 import Opening from "./components/opening.vue";
 import { useLocalStorage } from "@vueuse/core";
 import type { FormSchema } from "./type";
+import { ref } from "vue";
 
 const imageArray = [
   Prewed1,
@@ -45,6 +46,16 @@ const data = useLocalStorage<FormSchema>("form-data", {
 });
 
 const isSuccess = useLocalStorage("isSuccess", true);
+
+const audioRef = ref<HTMLAudioElement | null>(null)
+const isMuted = ref(false)
+
+const toggleAudio = () => {
+  if(!audioRef.value) return
+  isMuted.value = !isMuted.value
+  audioRef.value.muted = isMuted.value
+}
+
 </script>
 
 <template>
@@ -53,8 +64,15 @@ const isSuccess = useLocalStorage("isSuccess", true);
   <main
     class="overflow-hidden text-sm text-primary font-light bg-[url(/src/assets/background.jpg)] bg-center bg-contain grid justify-center"
   >
-    <div class="max-w-[500px]">
+    <div class="max-w-[500px] relative">
       <Opening />
+
+      <audio :src="backsound" ref="audioRef" autoplay loop></audio>
+
+      <div class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer" :onclick="toggleAudio">
+        <VolumeOff v-if="isMuted"/>
+        <Volume2 v-else/>
+      </div>
 
       <section
         class="min-h-screen w-full flex justify-center items-center relative"
