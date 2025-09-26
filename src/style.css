@@ -92,4 +92,5 @@
 html {
   color-scheme: light !important;
   supported-color-schemes: light;
+  forced-color-adjust: none !important;
 }
