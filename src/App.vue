@@ -26,7 +26,7 @@ import Form from "./components/form.vue";
 import Opening from "./components/opening.vue";
 import { useLocalStorage } from "@vueuse/core";
 import type { FormSchema } from "./type";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 const imageArray = [
   Prewed1,
@@ -45,7 +45,7 @@ const data = useLocalStorage<FormSchema>("form-data", {
   wish: "",
 });
 
-const isSuccess = useLocalStorage<boolean>("isSuccess", false);
+const isSuccess = useLocalStorage<boolean>('isSuccess', false);
 
 const audioRef = ref<HTMLAudioElement | null>(null);
 const isMuted = ref(false);
@@ -55,6 +55,10 @@ const toggleAudio = () => {
   isMuted.value = !isMuted.value;
   audioRef.value.muted = isMuted.value;
 };
+
+onMounted(() => {
+  isSuccess.value = false
+})
 </script>
 
 <template>
