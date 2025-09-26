@@ -5,6 +5,7 @@ import { ref } from "vue";
 import { motion } from "motion-v";
 
 const isOpen = ref(true);
+
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const isOpen = ref(true);
           <h2 class="text-6xl font-italiano">Luri & Reza</h2>
         </div>
         <Button
-          class="bg-[#D2D27D] w-fit px-3 py-2 text-lg text-black rounded-3xl"
+          class="bg-[#D2D27D] w-fit px-3 py-2 text-lg text-black rounded-3xl hover:text-white"
           v-on:click="isOpen = false"
         >
           BUKA UNDANGAN
