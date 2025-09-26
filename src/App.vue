@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Clock8, MapPin, Volume2, VolumeOff } from "lucide-vue-next";
+import { Clock8, MapPin, Volume2, VolumeOff, Youtube } from "lucide-vue-next";
 import Countdown from "./components/countdown.vue";
 import {
   backsound,
@@ -47,15 +47,14 @@ const data = useLocalStorage<FormSchema>("form-data", {
 
 const isSuccess = useLocalStorage("isSuccess", true);
 
-const audioRef = ref<HTMLAudioElement | null>(null)
-const isMuted = ref(false)
+const audioRef = ref<HTMLAudioElement | null>(null);
+const isMuted = ref(false);
 
 const toggleAudio = () => {
-  if(!audioRef.value) return
-  isMuted.value = !isMuted.value
-  audioRef.value.muted = isMuted.value
-}
-
+  if (!audioRef.value) return;
+  isMuted.value = !isMuted.value;
+  audioRef.value.muted = isMuted.value;
+};
 </script>
 
 <template>
@@ -69,9 +68,12 @@ const toggleAudio = () => {
 
       <audio :src="backsound" ref="audioRef" autoplay loop></audio>
 
-      <div class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer" :onclick="toggleAudio">
-        <VolumeOff v-if="isMuted"/>
-        <Volume2 v-else/>
+      <div
+        class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer"
+        :onclick="toggleAudio"
+      >
+        <VolumeOff v-if="isMuted" />
+        <Volume2 v-else />
       </div>
 
       <section
@@ -172,7 +174,7 @@ const toggleAudio = () => {
           />
           <h1 class="text-4xl font-italiano">Reza Iqbal Suhada</h1>
           <div class="grid gap-2 text-xl">
-            <p>PUTEA TUNGGAL DARI</p>
+            <p>PUTRA TUNGGAL DARI</p>
             <p>BAPAK JONI SUPRIYANTO</p>
             <p>&</p>
             <p>IBU SIHELEN TIEN SOEPARTINI</p>
@@ -246,7 +248,7 @@ const toggleAudio = () => {
               <div class="w-8">
                 <MapPin class="w-8" />
               </div>
-              <p class="text-left">LL. GEDONG SONGO DLM RT 6/ RW 1</p>
+              <p class="text-left">JL. GEDONG SONGO DLM RT 6/ RW 1</p>
             </div>
             <div class="flex gap-2 items-center">
               <div class="w-8">
@@ -264,14 +266,24 @@ const toggleAudio = () => {
           ></iframe>
 
           <div
-            class="rounded-full bg-[#662E1F] py-20 text-white px-8 grid gap-12"
+            class="rounded-full bg-[#662E1F] py-20 text-white px-8 flex flex-col gap-12 items-center"
           >
-            <h1 class="text-4xl font-italiano">Live Streaming</h1>
-          <div
-            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-white after:content-[''] after:flex-1 after:h-px after:bg-white my-4"
-          >
-            <div class="mx-8 size-3 rounded-full bg-white" />
-          </div>            <h1 class="text-4xl font-italiano">Coming Soon</h1>
+            <div>
+              <h1 class="text-4xl font-italiano">Live Streaming</h1>
+              <h2 class="text-2xl">Coming Soon</h2>
+            </div>
+
+            <a
+            href="https://youtube.com/@giakalibanteng?si=xjBO-0xthSBVOeL5"
+              class="bg-[#D9D9D9] rounded-full px-4 py-2 flex text-lg text-primary items-center gap-4 w-fit"
+            >
+              <Youtube />
+              <span>GIA KALIBANTENG YT ACC</span>
+            </a>
+
+            <p class="text-lg">
+              Live streaming will appear on this account on October 25th at 8 am
+            </p>
           </div>
         </div>
       </section>
@@ -291,11 +303,12 @@ const toggleAudio = () => {
       </section>
 
       <section class="mx-4">
-          <div
-            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
-          >
-            <div class="mx-8 size-3 rounded-full bg-primary" />
-          </div>      </section>
+        <div
+          class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
+        >
+          <div class="mx-8 size-3 rounded-full bg-primary" />
+        </div>
+      </section>
 
       <section class="my-20 px-4">
         <div class="grid gap-2 text-center">
@@ -335,11 +348,12 @@ const toggleAudio = () => {
       </section>
 
       <section class="mx-4">
-          <div
-            class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
-          >
-            <div class="mx-8 size-3 rounded-full bg-primary" />
-          </div>      </section>
+        <div
+          class="relative flex items-center before:content-[''] before:flex-1 before:h-px before:bg-primary after:content-[''] after:flex-1 after:h-px after:bg-primary my-4"
+        >
+          <div class="mx-8 size-3 rounded-full bg-primary" />
+        </div>
+      </section>
 
       <section class="my-20 px-4 flex justify-center items-center">
         <div class="relative w-[314px]">
@@ -348,7 +362,7 @@ const toggleAudio = () => {
             class="absolute uppercase text-center text-sm w-[250px] top-12 left-1/2 -translate-x-1/2"
           >
             Suatu kehormatan dan kebahagiaan bagi kami jika Bapak/Ibu/Saudara/i
-            dapat hadir dan memberikan berkat pada hari kebahagiaan kami.
+            dapat hadir dan memberikan berkat pada hari kebahagiaan kami.. Tuhan Yesus Memberkati
           </p>
         </div>
       </section>
