@@ -10,7 +10,7 @@ const isOpen = ref(true);
 
 <template>
   <motion.section
-    :class="`overflow-hidden fixed inset-0 w-full z-50 text-primary `"
+    :class="`overflow-hidden fixed inset-0 w-full z-[1000] text-primary `"
     :animate="isOpen ? { y: '0%', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(88px)' } : { y: '-100%', backgroundColor: 'rgba(0,0,0,0)', backdropFilter:'blur(0px)' }"
     :transition="{ type: 'spring' }"
   >
