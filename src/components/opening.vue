@@ -25,7 +25,7 @@ const isOpen = ref(true);
         <p class="uppercase text-lg">you are invited to</p>
         <div class="">
           <p class="text-lg">THE WEDDING OF</p>
-          <h2 class="text-6xl font-italiano">Luri & Reza</h2>
+          <h2 class="text-8xl font-italiano">Luri & Reza</h2>
         </div>
         <Button
           class="bg-[#D2D27D] w-fit px-3 py-2 text-lg text-black rounded-3xl hover:text-white cursor-pointer"

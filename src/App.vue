@@ -106,7 +106,7 @@ const toggleAudio = () => {
         <div class="grid gap-4 justify-center">
           <div class="text-center">
             <h2 class="text-xl">THE WEDDING OF</h2>
-            <h1 class="text-6xl font-italiano">Luri & Reza</h1>
+            <h1 class="text-7xl font-italiano">Luri & Reza</h1>
           </div>
           <img :src="holdingHand" alt="logo wedding" />
         </div>
@@ -118,7 +118,7 @@ const toggleAudio = () => {
         <div
           class="w-[247px] grid gap-4 text-center absolute left-1/2 -translate-x-1/2"
         >
-          <p class="text-lg font-italiano">
+          <p class="text-xl font-italiano">
             “Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan
             ibunya dan bersatu dengan isterinya, sehingga keduanya itu menjadi
             satu daging. Demikianlah mereka bukan lagi dua, melainkan satu.
@@ -135,7 +135,7 @@ const toggleAudio = () => {
             <div class="px-12 py-10 bg-primary rounded-[50%] inset-8">
               <div class="flex text-white items-center">
                 <div class="flex flex-col">
-                  <h2 class="text-6xl font-italiano leading-none">Bride</h2>
+                  <h2 class="text-8xl font-italiano leading-none">Bride</h2>
                   <h2 class="text-4xl">Groom</h2>
                 </div>
                 <h2 class="font-italiano text-[110px] leading-none">&</h2>
@@ -155,7 +155,7 @@ const toggleAudio = () => {
             alt="border-title"
             class="absolute -top-13"
           />
-          <h1 class="text-4xl font-italiano">Karen H Luri Audreynia</h1>
+          <h1 class="text-5xl font-italiano">Karen H Luri Audreynia</h1>
           <div class="grid gap-2 text-xl">
             <p>PUTRI PERTAMA DARI</p>
             <p>BAPAK ARIANTO</p>
@@ -173,7 +173,7 @@ const toggleAudio = () => {
             alt="border-title"
             class="absolute -top-13"
           />
-          <h1 class="text-4xl font-italiano">Reza Iqbal Suhada</h1>
+          <h1 class="text-5xl font-italiano">Reza Iqbal Suhada</h1>
           <div class="grid gap-2 text-xl">
             <p>PUTRA TUNGGAL DARI</p>
             <p>BAPAK JONI SUPRIYANTO</p>
@@ -202,7 +202,7 @@ const toggleAudio = () => {
           class="bg-[#EDD5B0] rounded-full inset-shadow-sm inset-shadow-black/25 grid justify-center px-5 py-8 text-center gap-4"
         >
           <img :src="flower2" alt="flower" class="w-full px-8" />
-          <h1 class="font-italiano text-4xl">Pemberkatan Nikah</h1>
+          <h1 class="font-italiano text-5xl">Pemberkatan Nikah</h1>
           <div
             class="bg-primary text-white px-5 py-2 rounded-xl text-xl md:px-10"
           >
@@ -240,7 +240,7 @@ const toggleAudio = () => {
           </div>
 
           <img :src="flower2" alt="flower" class="w-full px-8" />
-          <h1 class="font-italiano text-4xl">Wedding Reception</h1>
+          <h1 class="font-italiano text-5xl">Wedding Reception</h1>
           <div class="bg-primary text-white px-5 py-2 rounded-xl text-xl">
             SABTU, 25 OKTOBER 2025
           </div>
@@ -267,10 +267,10 @@ const toggleAudio = () => {
           ></iframe>
 
           <div
-            class="rounded-full bg-[#662E1F] py-20 text-white px-8 flex flex-col gap-12 items-center"
+            class="rounded-full bg-[#662E1F] py-20 text-white px-12 flex flex-col gap-12 items-center"
           >
             <div>
-              <h1 class="text-4xl font-italiano">Live Streaming</h1>
+              <h1 class="text-6xl font-italiano">Live Streaming</h1>
               <h2 class="text-2xl">Coming Soon</h2>
             </div>
 
@@ -294,7 +294,7 @@ const toggleAudio = () => {
       <section class="my-20 px-4">
         <div class="bg-gradient-to-b from-[#662E1F] to-[#EDD5B0] pt-4">
           <div class="content-[''] h-px w-1/2 bg-white" />
-          <h1 class="font-italiano text-6xl text-white text-right p-4">
+          <h1 class="font-italiano text-7xl text-white text-right p-4">
             Our Gallery
           </h1>
           <div class="p-8 grid gap-5 pt-0">
@@ -313,7 +313,7 @@ const toggleAudio = () => {
 
       <section class="my-20 px-4">
         <div class="grid gap-2 text-center">
-          <h1 class="font-italiano text-6xl">RSVP</h1>
+          <h1 class="font-italiano text-7xl">RSVP</h1>
           <p class="text-xl">
             {{
               isSuccess
@@ -363,7 +363,7 @@ const toggleAudio = () => {
             class="absolute uppercase text-center text-sm w-[250px] top-12 left-1/2 -translate-x-1/2"
           >
             Suatu kehormatan dan kebahagiaan bagi kami jika Bapak/Ibu/Saudara/i
-            dapat hadir dan memberikan berkat pada hari kebahagiaan kami.. Tuhan Yesus Memberkati
+            dapat hadir dan memberikan berkat pada hari kebahagiaan kami... <br> Tuhan Yesus Memberkati
           </p>
         </div>
       </section>

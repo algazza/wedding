@@ -47,8 +47,8 @@ onUnmounted(() => {
 <template>
   <span class="text-xl">SAVE THE DATE</span>
   <div class="font-italiano">
-    <p class="text-3xl leading-none">Sabtu</p>
-    <p class="text-6xl leading-none">25.10.25</p>
+    <p class="text-6xl leading-none">Sabtu</p>
+    <p class="text-7xl leading-none">25.10.25</p>
   </div>
   <div class="flex justify-center items-center text-3xl font-light gap-2">
     <div class="p-2 rounded-xl bg-primary text-white">{{ countdown.days }}</div>
