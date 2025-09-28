@@ -11,35 +11,34 @@ import { useLocalStorage } from "@vueuse/core";
 
 const urlAction = import.meta.env.VITE_API_URL;
 
-const data = useLocalStorage<FormSchema>('form-data', {
-  name: '',
-  family: '',
-  absen: 'Hadir',
-  wish: '',
-})
+const data = useLocalStorage<FormSchema>("form-data", {
+  name: "",
+  family: "",
+  absen: "Hadir",
+  wish: "",
+});
 
-const isSuccess = useLocalStorage('isSuccess', false)
+const isSuccess = useLocalStorage("isSubmit", false);
 
 const form = useForm({
   validationSchema: toTypedSchema(formSchema),
 });
 
-
 const onSubmit = form.handleSubmit((values, ctx) => {
   console.log(values);
   const form = ctx.evt?.target as HTMLFormElement;
-  data.value = values
+  data.value = values;
 
   form.submit();
-  isSuccess.value = true
+  isSuccess.value = true;
 });
 </script>
 
 <template>
   <form
-  class="bg-primary p-4 mt-4 rounded-md text-white space-y-6"
-  @submit="onSubmit"
-  :action="urlAction"
+    class="bg-primary p-4 mt-4 rounded-md text-white space-y-6"
+    @submit="onSubmit"
+    :action="urlAction"
     target="hidden_iframe"
   >
     <FormField
@@ -82,23 +81,31 @@ const onSubmit = form.handleSubmit((values, ctx) => {
       v-slot="{ componentField }"
       type="radio"
       name="absen"
-      :validate-on-blur="!form.isFieldDirty"      
+      :validate-on-blur="!form.isFieldDirty"
     >
       <FormItem>
         <FormLabel>Absen</FormLabel>
         <FormControl>
           <RadioGroup v-bind="componentField">
-            <FormItem class="flex items-center space-y-0 gap-x-3 ">
+            <FormItem class="flex items-center space-y-0 gap-x-3">
               <FormControl>
-                <RadioGroupItem value="Hadir" class="data-[state=checked]:bg-[#FFF375] data-[state=checked]:border-[#FFF375] cursor-pointer"/>
+                <RadioGroupItem
+                  value="Hadir"
+                  class="data-[state=checked]:bg-[#FFF375] data-[state=checked]:border-[#FFF375] cursor-pointer"
+                />
               </FormControl>
               <FormLabel class="font-normal">Hadir</FormLabel>
             </FormItem>
             <FormItem class="flex items-center space-y-0 gap-x-3">
               <FormControl>
-                <RadioGroupItem value="Tidak Hadir" class="data-[state=checked]:bg-[#FFF375] data-[state=checked]:border-[#FFF375] cursor-pointer"/>
+                <RadioGroupItem
+                  value="Tidak Hadir"
+                  class="data-[state=checked]:bg-[#FFF375] data-[state=checked]:border-[#FFF375] cursor-pointer"
+                />
               </FormControl>
-              <FormLabel class="font-normal">Maaf saya berhalangan hadir</FormLabel>
+              <FormLabel class="font-normal"
+                >Maaf saya berhalangan hadir</FormLabel
+              >
             </FormItem>
           </RadioGroup>
         </FormControl>
@@ -130,7 +137,9 @@ const onSubmit = form.handleSubmit((values, ctx) => {
       </FormItem>
     </FormField>
 
-    <Button type="submit" class="cursor-pointer bg-[#FFF375] text-primary hover:bg-[#c2b959]"
+    <Button
+      type="submit"
+      class="cursor-pointer bg-[#FFF375] text-primary hover:bg-[#c2b959]"
       >Submit</Button
     >
   </form>

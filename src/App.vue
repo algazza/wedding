@@ -26,7 +26,7 @@ import Form from "./components/form.vue";
 import Opening from "./components/opening.vue";
 import { useLocalStorage } from "@vueuse/core";
 import type { FormSchema } from "./type";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
 const imageArray = [
   Prewed1,
@@ -45,7 +45,7 @@ const data = useLocalStorage<FormSchema>("form-data", {
   wish: "",
 });
 
-const isSuccess = useLocalStorage<boolean>('isSuccess', false);
+const isSuccess = useLocalStorage<boolean>("isSubmit", false);
 
 const audioRef = ref<HTMLAudioElement | null>(null);
 const isMuted = ref(false);
@@ -55,11 +55,6 @@ const toggleAudio = () => {
   isMuted.value = !isMuted.value;
   audioRef.value.muted = isMuted.value;
 };
-
-
-onMounted(() => {
-  isSuccess.value = false
-})
 </script>
 
 <template>
@@ -71,12 +66,11 @@ onMounted(() => {
     <div class="max-w-[500px] relative">
       <Opening />
 
-      
       <div
-      class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer z-[99]"
-      :onclick="toggleAudio"
+        class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer z-[99]"
+        :onclick="toggleAudio"
       >
-      <audio :src="backsound" ref="audioRef" autoplay loop></audio>
+        <audio :src="backsound" ref="audioRef" autoplay loop></audio>
         <VolumeOff v-if="isMuted" />
         <Volume2 v-else />
       </div>
@@ -279,7 +273,7 @@ onMounted(() => {
             </div>
 
             <a
-            href="https://youtube.com/@giakalibanteng?si=xjBO-0xthSBVOeL5"
+              href="https://youtube.com/@giakalibanteng?si=xjBO-0xthSBVOeL5"
               class="bg-[#D9D9D9] rounded-full px-4 py-2 flex text-lg text-primary items-center gap-4 w-fit"
             >
               <Youtube />
@@ -367,7 +361,9 @@ onMounted(() => {
             class="absolute uppercase text-center text-sm w-[250px] top-12 left-1/2 -translate-x-1/2"
           >
             Suatu kehormatan dan kebahagiaan bagi kami jika Bapak/Ibu/Saudara/i
-            dapat hadir dan memberikan berkat pada hari kebahagiaan kami... <br> Tuhan Yesus Memberkati
+            dapat hadir dan memberikan berkat pada hari kebahagiaan kami...
+            <br />
+            Tuhan Yesus Memberkati
           </p>
         </div>
       </section>
