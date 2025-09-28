@@ -17,7 +17,7 @@ import Prewed5 from "@/assets/prewed/5thprewed.jpg"
 import Prewed6 from "@/assets/prewed/6thprewed.jpg"
 import Prewed7 from "@/assets/prewed/7thprewed.jpg"
 import PrewedClose from "@/assets/prewed/closingprewed.jpg"
-import backsound from "@/assets/sigma.mp3"
+import backsound from "@/assets/backsound.mp3"
 
 export {
     logo_wedding,
