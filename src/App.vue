@@ -48,7 +48,7 @@ const data = useLocalStorage<FormSchema>("form-data", {
 const isSuccess = useLocalStorage<boolean>("isSubmit", false);
 
 const audioRef = ref<HTMLAudioElement | null>(null);
-const isMuted = ref(false);
+const isMuted = ref(true);
 
 const toggleAudio = () => {
   if (!audioRef.value) return;
@@ -151,9 +151,9 @@ const toggleAudio = () => {
           <img
             :src="borederTitle"
             alt="border-title"
-            class="absolute -top-13"
+            class="absolute -top-12 lg:-top-13"
           />
-          <h1 class="text-5xl font-italiano">Karen H Luri Audreynia</h1>
+          <h1 class="text-4xl lg:text-5xl font-italiano">Karen H Luri Audreynia</h1>
           <div class="grid gap-2 text-xl">
             <p>PUTRI PERTAMA DARI</p>
             <p>BAPAK ARIANTO</p>
@@ -171,7 +171,7 @@ const toggleAudio = () => {
             alt="border-title"
             class="absolute -top-13"
           />
-          <h1 class="text-5xl font-italiano">Reza Iqbal Suhada</h1>
+          <h1 class="text-4xl lg:text-5xl font-italiano">Reza Iqbal Suhada</h1>
           <div class="grid gap-2 text-xl">
             <p>PUTRA TUNGGAL DARI</p>
             <p>BAPAK JONI SUPRIYANTO</p>
