@@ -253,7 +253,7 @@ const toggleAudio = () => {
               <div class="w-8">
                 <Clock8 class="w-8" />
               </div>
-              <p class="text-left">12:00 WIB</p>
+              <p class="text-left">13:00 WIB</p>
             </div>
           </div>
           <iframe
