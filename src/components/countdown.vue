@@ -45,7 +45,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <span class="text-xl">SAVE THE DATE</span>
   <div class="font-italiano">
     <p class="text-6xl leading-none">Sabtu</p>
     <p class="text-7xl leading-none">25.10.25</p>

@@ -70,7 +70,7 @@ const toggleAudio = () => {
         class="rounded-full bg-primary p-4 text-white fixed bottom-8 right-8 cursor-pointer z-[99]"
         :onclick="toggleAudio"
       >
-        <audio :src="backsound" ref="audioRef" autoplay loop></audio>
+        <audio :src="backsound" ref="audioRef" autoplay loop muted></audio>
         <VolumeOff v-if="isMuted" />
         <Volume2 v-else />
       </div>
