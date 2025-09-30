@@ -147,7 +147,7 @@ const toggleAudio = () => {
 
       <section class="my-20 flex flex-col items-center justify-center">
         <img :src="Luri" alt="Karen H Luri Audreynia" />
-        <div class="grid gap-16 mt-[10px] text-center relative">
+        <div class="grid gap-12 mt-[10px] text-center relative">
           <img
             :src="borederTitle"
             alt="border-title"
@@ -195,7 +195,7 @@ const toggleAudio = () => {
         <Countdown />
       </section>
 
-      <section class="my-20 px-4">
+      <section class="my-20 px-10">
         <div
           class="bg-[#EDD5B0] rounded-full inset-shadow-sm inset-shadow-black/25 grid justify-center px-5 py-8 text-center gap-4"
         >
@@ -265,10 +265,10 @@ const toggleAudio = () => {
           ></iframe>
 
           <div
-            class="rounded-full bg-[#662E1F] py-20 text-white px-12 flex flex-col gap-12 items-center"
+            class="rounded-full bg-[#662E1F] py-20 text-white px-6 md:px-12 flex flex-col gap-12 items-center"
           >
             <div>
-              <h1 class="text-6xl font-italiano">Live Streaming</h1>
+              <h1 class="text-5xl lg:text-6xl font-italiano">Live Streaming</h1>
               <h2 class="text-2xl">Coming Soon</h2>
             </div>
 
@@ -277,7 +277,7 @@ const toggleAudio = () => {
               class="bg-[#D9D9D9] rounded-full px-4 py-2 flex text-lg text-primary items-center gap-4 w-fit"
             >
               <Youtube />
-              <span>GIA KALIBANTENG YT ACC</span>
+              <span>GIA KALIBANTENG</span>
             </a>
 
             <p class="text-lg">
@@ -289,10 +289,10 @@ const toggleAudio = () => {
 
       <img :src="divider" alt="flower" class="" />
 
-      <section class="my-20 px-4">
+      <section class="my-20 px-10">
         <div class="bg-gradient-to-b from-[#662E1F] to-[#EDD5B0] pt-4">
           <div class="content-[''] h-px w-1/2 bg-white" />
-          <h1 class="font-italiano text-7xl text-white text-right p-4">
+          <h1 class="font-italiano text-6xl lg:text-7xl text-white text-right p-4">
             Our Gallery
           </h1>
           <div class="p-8 grid gap-5 pt-0">
@@ -309,7 +309,7 @@ const toggleAudio = () => {
         </div>
       </section>
 
-      <section class="my-20 px-4">
+      <section class="my-20 px-10">
         <div class="grid gap-2 text-center">
           <h1 class="font-italiano text-7xl">RSVP</h1>
           <p class="text-xl">
