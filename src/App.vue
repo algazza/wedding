@@ -104,7 +104,7 @@ const toggleAudio = () => {
         <div class="grid gap-4 justify-center">
           <div class="text-center">
             <h2 class="text-xl">THE WEDDING OF</h2>
-            <h1 class="text-7xl font-italiano">Luri & Reza</h1>
+            <h1 class="text-7xl font-italiano">Luri &nbsp;& &nbsp; Reza</h1>
           </div>
           <img :src="holdingHand" alt="logo wedding" />
         </div>
@@ -123,7 +123,7 @@ const toggleAudio = () => {
             Karena itu, apa yang telah dipersatukan Allah, tidak boleh
             diceraikan manusia.”
           </p>
-          <h2 class="text-lg">MATIUS 19 : 5-6</h2>
+          <h2 class="text-lg font-extrabold">MATIUS 19 : 5-6</h2>
         </div>
       </section>
 
@@ -195,9 +195,9 @@ const toggleAudio = () => {
         <Countdown />
       </section>
 
-      <section class="my-20 px-10">
+      <section class="my-20 px-6">
         <div
-          class="bg-[#EDD5B0] rounded-full inset-shadow-sm inset-shadow-black/25 grid justify-center px-5 py-8 text-center gap-4"
+          class="bg-[#EDD5B0] rounded-full inset-shadow-sm inset-shadow-black/25 grid justify-center px-4 py-8 text-center gap-4"
         >
           <img :src="flower2" alt="flower" class="w-full px-8" />
           <h1 class="font-italiano text-5xl">Pemberkatan Nikah</h1>
@@ -265,7 +265,7 @@ const toggleAudio = () => {
           ></iframe>
 
           <div
-            class="rounded-full bg-[#662E1F] py-20 text-white px-6 md:px-12 flex flex-col gap-12 items-center"
+            class="rounded-full bg-[#662E1F] py-20 text-white px-8 md:px-12 flex flex-col gap-12 items-center"
           >
             <div>
               <h1 class="text-5xl lg:text-6xl font-italiano">Live Streaming</h1>
@@ -289,7 +289,7 @@ const toggleAudio = () => {
 
       <img :src="divider" alt="flower" class="" />
 
-      <section class="my-20 px-10">
+      <section class="my-20 px-6">
         <div class="bg-gradient-to-b from-[#662E1F] to-[#EDD5B0] pt-4">
           <div class="content-[''] h-px w-1/2 bg-white" />
           <h1 class="font-italiano text-6xl lg:text-7xl text-white text-right p-4">
@@ -309,7 +309,7 @@ const toggleAudio = () => {
         </div>
       </section>
 
-      <section class="my-20 px-10">
+      <section class="my-20 px-6">
         <div class="grid gap-2 text-center">
           <h1 class="font-italiano text-7xl">RSVP</h1>
           <p class="text-xl">

@@ -16,7 +16,7 @@ import Prewed4 from "@/assets/prewed/4thprewed.jpg"
 import Prewed5 from "@/assets/prewed/5thprewed.jpg"
 import Prewed6 from "@/assets/prewed/6thprewed.jpg"
 import Prewed7 from "@/assets/prewed/7thprewed.jpg"
-import PrewedClose from "@/assets/prewed/closingprewed.jpg"
+import PrewedClose from "@/assets/prewed/closingprewed.png"
 import backsound from "@/assets/backsound.mp3"
 
 export {
